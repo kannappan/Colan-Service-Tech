@@ -1,0 +1,509 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 14.5, 38.75" name="DailyRecap">
+  <DataContextMoniker Name="/DailyRecapDataContext" />
+  <nestedChildShapes>
+    <classShape Id="25f17028-dd80-44aa-851c-f0a75360b539" absoluteBounds="4.75, 0.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DailyRecapDataContext/ApplicationType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="809ae57f-bca4-4426-89ad-7ea568535ea1" absoluteBounds="4.765, 1.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ae65c3e6-6082-4d1c-b6c7-4073a6512455" absoluteBounds="3.5, 15.75, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/DailyRecapDataContext/UserRole" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c39d9841-ec03-44cb-a5da-32e271d754de" absoluteBounds="3.515, 16.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9098f978-e887-4d6e-9c37-267174c615d6" absoluteBounds="9.5, 3.75, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/DailyRecapDataContext/BlobEntry" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7b56ce55-5f25-42dd-b138-2c5b629ed406" absoluteBounds="9.515, 4.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f2042ff3-fdfc-41d8-8db7-56fb75f452b9" absoluteBounds="6.75, 3.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DailyRecapDataContext/BlobType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="58eef31d-ce94-483b-b826-8130a99c78f1" absoluteBounds="6.765, 4.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0d1ff992-2802-4caf-a2e7-2f5def58cf06" absoluteBounds="0.75, 5.875, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/DailyRecapDataContext/Category" />
+      <nestedChildShapes>
+        <elementListCompartment Id="44ff124f-c71b-4e09-95c6-d33fb03e0ac7" absoluteBounds="0.765, 6.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e1431cb3-c47d-4e6a-9090-46d7c45d6626" absoluteBounds="6.75, 7, 2, 3.1170068359375014">
+      <DataClassMoniker Name="/DailyRecapDataContext/Contact" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7824f557-46dc-4c53-a0e8-c30f690f5843" absoluteBounds="6.765, 7.46, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="42f39a1d-c157-4a8d-bc63-3126caf1b6d8" absoluteBounds="0.75, 0.75, 2, 1.3862939453125">
+      <DataClassMoniker Name="/DailyRecapDataContext/DailyRecapAudit" />
+      <nestedChildShapes>
+        <elementListCompartment Id="52c4206a-87fc-4f7b-80e2-991bb729263f" absoluteBounds="0.765, 1.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f238941b-b4b0-4688-bd56-b9f78033ecf9" absoluteBounds="6.75, 36.75, 2, 1.7708968098958309">
+      <DataClassMoniker Name="/DailyRecapDataContext/Feature" />
+      <nestedChildShapes>
+        <elementListCompartment Id="eb924768-ed6f-478d-b7b6-dbdbec9fa80e" absoluteBounds="6.765, 37.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ffa50d2b-45d4-4122-ba1f-dc84dee68408" absoluteBounds="9.5, 25.75, 2, 1.7708968098958309">
+      <DataClassMoniker Name="/DailyRecapDataContext/FeatureRole" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c7fb41d0-a3dc-481d-929a-66568662ad86" absoluteBounds="9.515, 26.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5c91f59f-329b-479c-a12f-c5652ab4565d" absoluteBounds="4, 36.75, 2, 1.5785953776041595">
+      <DataClassMoniker Name="/DailyRecapDataContext/FeatureType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="61c4f2a8-8fc4-4f48-b200-a2215e9cdb90" absoluteBounds="4.015, 37.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="23a8b79d-d01a-4dbe-99f0-351e20201467" absoluteBounds="6.75, 22.625, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DailyRecapDataContext/IntervalType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="647fa3d8-1c37-4909-b513-36cd7f8ae98c" absoluteBounds="6.765, 23.085, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fded6ce2-5d74-489f-9ed4-1fe0f7bd15af" absoluteBounds="6.5, 15.5, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/DailyRecapDataContext/LikeUnlike" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3544e09c-8644-4ea4-afdb-b7e994663b24" absoluteBounds="6.515, 15.96, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9abf59fb-f2c9-4756-a1fd-ea0323ca14c8" absoluteBounds="0.75, 21.875, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/DailyRecapDataContext/Location" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cef83651-e5c0-41a9-8430-4899fbad5f74" absoluteBounds="0.765, 22.335, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d4f85b4c-a800-4f45-af17-dc5bc30b9b83" absoluteBounds="1.5, 31.5, 2, 3.886212565104163">
+      <DataClassMoniker Name="/DailyRecapDataContext/LocationInfo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="51701f75-7f34-45ee-8365-132e7c2321ea" absoluteBounds="1.5150000000000001, 31.96, 1.9700000000000002, 3.3262125651041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0ae465dc-cb4b-4de9-84d1-0a52f2810c92" absoluteBounds="1.5, 3, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DailyRecapDataContext/Organization" />
+      <nestedChildShapes>
+        <elementListCompartment Id="02929e84-9c5e-4c91-83e1-e820ac07e16f" absoluteBounds="1.5150000000000001, 3.46, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4b5cb72c-2357-48c8-93ef-eb3d122a06f9" absoluteBounds="6.5, 11.375, 2, 2.5401025390624987">
+      <DataClassMoniker Name="/DailyRecapDataContext/Problem" />
+      <nestedChildShapes>
+        <elementListCompartment Id="84a83083-fd0b-4477-bda7-5eefca7b9d8a" absoluteBounds="6.515, 11.835, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1f185abc-f664-4078-a2c1-f98d2cbe3936" absoluteBounds="12.25, 11.75, 2, 1.7708968098958344">
+      <DataClassMoniker Name="/DailyRecapDataContext/ProblemBlob" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bda371d5-f2e6-4177-aeec-d4732c46ad08" absoluteBounds="12.265, 12.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b032540f-f171-4902-91ed-75a593b3e160" absoluteBounds="0.75, 11.25, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/DailyRecapDataContext/RecapSetting" />
+      <nestedChildShapes>
+        <elementListCompartment Id="327ad9a5-5db9-44f3-98ca-d3897c6fd136" absoluteBounds="0.765, 11.71, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a16a08e5-49af-4b6b-b3af-036443026cc7" absoluteBounds="3.5, 6, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/DailyRecapDataContext/RecapSettingCategory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9702c2da-2acb-4a2b-83f6-2cc47d2e84a1" absoluteBounds="3.515, 6.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="563dcc0b-6e3b-44f0-befe-154f52efad57" absoluteBounds="3.5, 21.25, 2, 1.7708968098958309">
+      <DataClassMoniker Name="/DailyRecapDataContext/RecapSettingDay" />
+      <nestedChildShapes>
+        <elementListCompartment Id="219917c7-9d03-42ac-be4c-497fd4557756" absoluteBounds="3.515, 21.71, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="63f94708-2139-4126-a3a9-66b332a10089" absoluteBounds="9.5, 22.75, 2, 1.7708968098958309">
+      <DataClassMoniker Name="/DailyRecapDataContext/RecapSettingLocation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8306fb0d-272b-4548-bd30-296de1706e2d" absoluteBounds="9.515, 23.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e151b16e-9e43-46f1-bfa4-e0d81247213f" absoluteBounds="3.5, 12.75, 2, 1.7708968098958344">
+      <DataClassMoniker Name="/DailyRecapDataContext/RecapSettingUser" />
+      <nestedChildShapes>
+        <elementListCompartment Id="af86a622-13e4-406b-94f8-ddf845117317" absoluteBounds="3.515, 13.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="17668d8d-a7ef-4bdd-abdd-f13affec2315" absoluteBounds="0.75, 18.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DailyRecapDataContext/Role" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9facb3ec-75e3-445a-9546-15f2d4cc5626" absoluteBounds="0.765, 19.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="80cee43c-9bba-4939-bd98-2d0ffd417001" absoluteBounds="1.5, 25.5, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/DailyRecapDataContext/ServicePlanInfo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="32815f7a-226a-4858-96b7-c0bd5b312a16" absoluteBounds="1.5150000000000001, 25.96, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4c395dce-d5f7-4a5c-a604-87d98025865a" absoluteBounds="1.75, 28.75, 2, 1.7708968098958309">
+      <DataClassMoniker Name="/DailyRecapDataContext/ServicePlanType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b9cf7919-c43c-41ca-be43-19be4a6774fc" absoluteBounds="1.7650000000000001, 29.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5de3ba29-7b65-4496-a4b5-32c7a49ada4c" absoluteBounds="9.5, 14.75, 2, 3.6939111328125005">
+      <DataClassMoniker Name="/DailyRecapDataContext/Snooze" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8fa7a893-7e83-4bf4-a2f5-5da4267ee200" absoluteBounds="9.515, 15.21, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="420cae63-0f5c-4e55-819a-4462ea9cbc8c" absoluteBounds="12.25, 14.25, 2, 1.7708968098958344">
+      <DataClassMoniker Name="/DailyRecapDataContext/SnoozedTicket" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2c56a166-6c45-41b2-a6b0-b3eea9d4aad3" absoluteBounds="12.265, 14.71, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9372f7bb-0acb-462d-b3d0-0253c176bed8" absoluteBounds="6.75, 25, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DailyRecapDataContext/SnoozeReason" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c0147129-83e4-4fe7-a134-19f36cb86d63" absoluteBounds="6.765, 25.46, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3c23fbfd-43a6-4cb6-82ea-749d0ad90cec" absoluteBounds="6.5, 19.375, 2, 2.5401025390625023">
+      <DataClassMoniker Name="/DailyRecapDataContext/Solution" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b5b5a211-d213-4bba-9287-7b5558fc151f" absoluteBounds="6.515, 19.835, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0c0fe0a0-45b7-4f04-88dc-5de75f6096a3" absoluteBounds="9.25, 19.75, 2, 1.7708968098958309">
+      <DataClassMoniker Name="/DailyRecapDataContext/SolutionBlob" />
+      <nestedChildShapes>
+        <elementListCompartment Id="99aac640-c458-4e4c-ad7d-f235b7c09a42" absoluteBounds="9.265, 20.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5e65c19b-b685-4cf5-91cc-a211d8a4e115" absoluteBounds="7.75, 0.75, 2, 1.7708968098958329">
+      <DataClassMoniker Name="/DailyRecapDataContext/SystemConfig" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1e89eba4-1d2e-46b0-b3d7-7e291a975140" absoluteBounds="7.765, 1.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="aa62842b-e1da-42fd-9e35-f4246f2d2ed4" absoluteBounds="0.75, 15.25, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/DailyRecapDataContext/User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2429dbad-e005-4bbc-8461-72ae80c64372" absoluteBounds="0.765, 15.71, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="291bd926-b86a-4dc9-b546-fe86d0f7c499" absoluteBounds="3.5, 18.75, 2, 1.7708968098958309">
+      <DataClassMoniker Name="/DailyRecapDataContext/UserOrganization" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6578b830-1ea0-4065-b33c-90867b9af02a" absoluteBounds="3.515, 19.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.75 : 4.53929768880208); (9.5 : 4.53929768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DailyRecapDataContext/BlobType/BlobType_BlobEntry" />
+      <nodes>
+        <classShapeMoniker Id="f2042ff3-fdfc-41d8-8db7-56fb75f452b9" />
+        <classShapeMoniker Id="9098f978-e887-4d6e-9c37-267174c615d6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.75 : 37.6354484049479); (10.5 : 37.6354484049479); (10.5 : 27.5208968098958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DailyRecapDataContext/Feature/Feature_FeatureRole" />
+      <nodes>
+        <classShapeMoniker Id="f238941b-b4b0-4688-bd56-b9f78033ecf9" />
+        <classShapeMoniker Id="ffa50d2b-45d4-4122-ba1f-dc84dee68408" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6 : 37.5392976888021); (6.75 : 37.5392976888021)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DailyRecapDataContext/FeatureType/FeatureType_Feature" />
+      <nodes>
+        <classShapeMoniker Id="5c91f59f-329b-479c-a12f-c5652ab4565d" />
+        <classShapeMoniker Id="f238941b-b4b0-4688-bd56-b9f78033ecf9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 21.9365374615385); (3.3125 : 21.3740374615385); (3.3125 : 8.44794840494792); (6.75 : 8.44794840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DailyRecapDataContext/Location/Location_Contact" />
+      <nodes>
+        <classShapeMoniker Id="9abf59fb-f2c9-4756-a1fd-ea0323ca14c8" />
+        <classShapeMoniker Id="e1431cb3-c47d-4e6a-9090-46d7c45d6626" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.5 : 33.4431062825521); (1.1249995 : 33.4431062825521); (1.1249995 : 24.0304996744792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DailyRecapDataContext/LocationInfo/LocationInfo_Location" />
+      <nodes>
+        <classShapeMoniker Id="d4f85b4c-a800-4f45-af17-dc5bc30b9b83" />
+        <classShapeMoniker Id="9abf59fb-f2c9-4756-a1fd-ea0323ca14c8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.125 : 4.57859537760417); (2.125 : 5.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DailyRecapDataContext/Organization/Organization_Category" />
+      <nodes>
+        <classShapeMoniker Id="0ae465dc-cb4b-4de9-84d1-0a52f2810c92" />
+        <classShapeMoniker Id="0d1ff992-2802-4caf-a2e7-2f5def58cf06" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.0625 : 4.57859537760417); (3.0625 : 8.78647670247396); (3.15104166666667 : 8.78647670247396 : JumpStart); (3.39583333333333 : 8.78647670247396 : JumpEnd); (6.75 : 8.78647670247396)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DailyRecapDataContext/Organization/Organization_Contact" />
+      <nodes>
+        <classShapeMoniker Id="0ae465dc-cb4b-4de9-84d1-0a52f2810c92" />
+        <classShapeMoniker Id="e1431cb3-c47d-4e6a-9090-46d7c45d6626" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.5 : 4.63544840494792); (13.25 : 4.63544840494792); (13.25 : 11.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DailyRecapDataContext/BlobEntry/BlobEntry_ProblemBlob" />
+      <nodes>
+        <classShapeMoniker Id="9098f978-e887-4d6e-9c37-267174c615d6" />
+        <classShapeMoniker Id="1f185abc-f664-4078-a2c1-f98d2cbe3936" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.5 : 11.375); (7.5 : 10.625); (8.57291666666667 : 10.625 : JumpStart); (8.73958333333333 : 10.625 : JumpEnd); (10.2916666666667 : 10.625 : JumpStart); (10.4583333333333 : 10.625 : JumpEnd); (11.875 : 10.625); (11.875 : 12.6354484049479); (11.9791666666667 : 12.6354484049479 : JumpStart); (12.1458333333333 : 12.6354484049479 : JumpEnd); (12.25 : 12.6354484049479)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DailyRecapDataContext/Problem/Problem_ProblemBlob" />
+      <nodes>
+        <classShapeMoniker Id="4b5cb72c-2357-48c8-93ef-eb3d122a06f9" />
+        <classShapeMoniker Id="1f185abc-f664-4078-a2c1-f98d2cbe3936" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 6.88544840494792); (2.85416666666667 : 6.88544840494792 : JumpStart); (3.14583333333333 : 6.88544840494792 : JumpEnd); (3.15104166666667 : 6.88544840494792 : JumpStart); (3.31770833333333 : 6.88544840494792 : JumpEnd); (3.5 : 6.88544840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DailyRecapDataContext/Category/Category_RecapSettingCategory" />
+      <nodes>
+        <classShapeMoniker Id="0d1ff992-2802-4caf-a2e7-2f5def58cf06" />
+        <classShapeMoniker Id="a16a08e5-49af-4b6b-b3af-036443026cc7" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 11.2515374615385); (2.87857443490112 : 11.1229630266374 : JumpStart); (2.99642556509888 : 11.0051118964396 : JumpEnd); (3.125 : 10.8765374615385); (3.125 : 6.88544840494792); (3.15104166666667 : 6.88544840494792 : JumpStart); (3.31770833333333 : 6.88544840494792 : JumpEnd); (3.5 : 6.88544840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DailyRecapDataContext/RecapSetting/RecapSetting_RecapSettingCategory" />
+      <nodes>
+        <classShapeMoniker Id="b032540f-f171-4902-91ed-75a593b3e160" />
+        <classShapeMoniker Id="a16a08e5-49af-4b6b-b3af-036443026cc7" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 13.9824039713542); (2.87857443490112 : 14.1109784062553 : JumpStart); (2.99642556509888 : 14.2288295364531 : JumpEnd); (3.125 : 14.3574039713542); (3.125 : 22.1354484049479); (3.5 : 22.1354484049479)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DailyRecapDataContext/RecapSetting/RecapSetting_RecapSettingDay" />
+      <nodes>
+        <classShapeMoniker Id="b032540f-f171-4902-91ed-75a593b3e160" />
+        <classShapeMoniker Id="563dcc0b-6e3b-44f0-befe-154f52efad57" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.96875225 : 24.0304996744792); (1.96875225 : 24.39349609375); (2.33854279166667 : 24.39349609375 : JumpStart); (2.50520945833333 : 24.39349609375 : JumpEnd); (8.91666666666667 : 24.39349609375 : JumpStart); (9.08333333333333 : 24.39349609375 : JumpEnd); (9.5 : 24.39349609375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DailyRecapDataContext/Location/Location_RecapSettingLocation" />
+      <nodes>
+        <classShapeMoniker Id="9abf59fb-f2c9-4756-a1fd-ea0323ca14c8" />
+        <classShapeMoniker Id="63f94708-2139-4126-a3a9-66b332a10089" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.718748 : 13.9824039713542); (1.718748 : 15); (3 : 15); (3 : 24.7035953776042); (7.66666666666667 : 24.7035953776042 : JumpStart); (7.83333333333333 : 24.7035953776042 : JumpEnd); (9.125 : 24.7035953776042); (9.125 : 23.540496046875); (9.16666666666667 : 23.540496046875 : JumpStart); (9.33333333333333 : 23.540496046875 : JumpEnd); (9.5 : 23.540496046875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DailyRecapDataContext/RecapSetting/RecapSetting_RecapSettingLocation" />
+      <nodes>
+        <classShapeMoniker Id="b032540f-f171-4902-91ed-75a593b3e160" />
+        <classShapeMoniker Id="63f94708-2139-4126-a3a9-66b332a10089" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 13.3349494856771); (3.15104166666667 : 13.3349494856771 : JumpStart); (3.31770833333333 : 13.3349494856771 : JumpEnd); (3.5 : 13.3349494856771)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DailyRecapDataContext/RecapSetting/RecapSetting_RecapSettingUser" />
+      <nodes>
+        <classShapeMoniker Id="b032540f-f171-4902-91ed-75a593b3e160" />
+        <classShapeMoniker Id="e151b16e-9e43-46f1-bfa4-e0d81247213f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 18.7815709075521); (3.15982443490112 : 18.371746472651 : JumpStart); (3.27767556509888 : 18.2538953424532 : JumpEnd); (3.40625 : 18.1253209075521); (3.40625 : 16.6354484049479); (3.5 : 16.6354484049479)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DailyRecapDataContext/Role/Role_UserRole" />
+      <nodes>
+        <classShapeMoniker Id="17668d8d-a7ef-4bdd-abdd-f13affec2315" />
+        <classShapeMoniker Id="ae65c3e6-6082-4d1c-b6c7-4073a6512455" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 19.5863351425781); (2.875 : 19.5863351425781); (2.875 : 20.7708968098958); (3.13541666666667 : 20.7708968098958 : JumpStart); (3.30208333333333 : 20.7708968098958 : JumpEnd); (6.25 : 20.7708968098958); (6.25 : 22.1651025390625); (8.57291666666667 : 22.1651025390625 : JumpStart); (8.73958333333333 : 22.1651025390625 : JumpEnd); (8.91666666666667 : 22.1651025390625 : JumpStart); (9.08333333333333 : 22.1651025390625 : JumpEnd); (9.25 : 22.1651025390625); (9.25 : 25.375); (10.5 : 25.375); (10.5 : 25.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DailyRecapDataContext/Role/Role_FeatureRole" />
+      <nodes>
+        <classShapeMoniker Id="17668d8d-a7ef-4bdd-abdd-f13affec2315" />
+        <classShapeMoniker Id="ffa50d2b-45d4-4122-ba1f-dc84dee68408" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.421876125 : 25.5); (2.421876125 : 24.0304996744792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DailyRecapDataContext/ServicePlanInfo/ServicePlanInfo_Location" />
+      <nodes>
+        <classShapeMoniker Id="80cee43c-9bba-4939-bd98-2d0ffd417001" />
+        <classShapeMoniker Id="9abf59fb-f2c9-4756-a1fd-ea0323ca14c8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.625 : 28.75); (2.625 : 27.6554996744792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DailyRecapDataContext/ServicePlanType/ServicePlanType_ServicePlanInfo" />
+      <nodes>
+        <classShapeMoniker Id="4c395dce-d5f7-4a5c-a604-87d98025865a" />
+        <classShapeMoniker Id="80cee43c-9bba-4939-bd98-2d0ffd417001" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.65625 : 22.625); (8.65625 : 18.0809554036458); (8.91666666666667 : 18.0809554036458 : JumpStart); (9.08333333333333 : 18.0809554036458 : JumpEnd); (9.5 : 18.0809554036458)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DailyRecapDataContext/IntervalType/IntervalType_Snooze" />
+      <nodes>
+        <classShapeMoniker Id="23a8b79d-d01a-4dbe-99f0-351e20201467" />
+        <classShapeMoniker Id="5de3ba29-7b65-4496-a4b5-32c7a49ada4c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.5 : 15.3854484049479); (11.9791666666667 : 15.3854484049479 : JumpStart); (12.1458333333333 : 15.3854484049479 : JumpEnd); (12.25 : 15.3854484049479)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DailyRecapDataContext/Snooze/Snooze_SnoozedTicket" />
+      <nodes>
+        <classShapeMoniker Id="5de3ba29-7b65-4496-a4b5-32c7a49ada4c" />
+        <classShapeMoniker Id="420cae63-0f5c-4e55-819a-4462ea9cbc8c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.75 : 25); (7.75 : 24.5785953776042); (9 : 24.5785953776042); (9 : 16.3842257018229); (9.5 : 16.3842257018229)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DailyRecapDataContext/SnoozeReason/SnoozeReason_Snooze" />
+      <nodes>
+        <classShapeMoniker Id="9372f7bb-0acb-462d-b3d0-0253c176bed8" />
+        <classShapeMoniker Id="5de3ba29-7b65-4496-a4b5-32c7a49ada4c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.5 : 19.375); (7.5 : 17.6554996744792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DailyRecapDataContext/Solution/Solution_LikeUnlike" />
+      <nodes>
+        <classShapeMoniker Id="3c23fbfd-43a6-4cb6-82ea-749d0ad90cec" />
+        <classShapeMoniker Id="fded6ce2-5d74-489f-9ed4-1fe0f7bd15af" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.5 : 5.45823330739183); (12.0625 : 6.02073330739183); (12.0625 : 19.375); (11.625 : 19.375); (11.25 : 19.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DailyRecapDataContext/BlobEntry/BlobEntry_SolutionBlob" />
+      <nodes>
+        <classShapeMoniker Id="9098f978-e887-4d6e-9c37-267174c615d6" />
+        <classShapeMoniker Id="0c0fe0a0-45b7-4f04-88dc-5de75f6096a3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 20.6354484049479); (8.91666666666667 : 20.6354484049479 : JumpStart); (9.08333333333333 : 20.6354484049479 : JumpEnd); (9.25 : 20.6354484049479)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DailyRecapDataContext/Solution/Solution_SolutionBlob" />
+      <nodes>
+        <classShapeMoniker Id="3c23fbfd-43a6-4cb6-82ea-749d0ad90cec" />
+        <classShapeMoniker Id="0c0fe0a0-45b7-4f04-88dc-5de75f6096a3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 16.130224202474); (3.13541666666667 : 16.130224202474 : JumpStart); (3.30208333333333 : 16.130224202474 : JumpEnd); (3.5 : 16.130224202474)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DailyRecapDataContext/User/User_UserRole" />
+      <nodes>
+        <classShapeMoniker Id="aa62842b-e1da-42fd-9e35-f4246f2d2ed4" />
+        <classShapeMoniker Id="ae65c3e6-6082-4d1c-b6c7-4073a6512455" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 15.59375); (3.13541666666667 : 15.59375 : JumpStart); (3.30208333333333 : 15.59375 : JumpEnd); (6.5 : 15.59375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DailyRecapDataContext/User/User_LikeUnlike" />
+      <nodes>
+        <classShapeMoniker Id="aa62842b-e1da-42fd-9e35-f4246f2d2ed4" />
+        <classShapeMoniker Id="fded6ce2-5d74-489f-9ed4-1fe0f7bd15af" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 15.3376913076923); (2.93144130769231 : 15.15625); (7.468748 : 15.15625); (7.468748 : 13.9151025390625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DailyRecapDataContext/User/User_Problem" />
+      <nodes>
+        <classShapeMoniker Id="aa62842b-e1da-42fd-9e35-f4246f2d2ed4" />
+        <classShapeMoniker Id="4b5cb72c-2357-48c8-93ef-eb3d122a06f9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.72846153846154 : 15.25); (3.15625 : 14.8222115384615); (3.15625 : 13.9591751477865); (3.5 : 13.9591751477865)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DailyRecapDataContext/User/User_RecapSettingUser" />
+      <nodes>
+        <classShapeMoniker Id="aa62842b-e1da-42fd-9e35-f4246f2d2ed4" />
+        <classShapeMoniker Id="e151b16e-9e43-46f1-bfa4-e0d81247213f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 17.8502018229167); (3.13541666666667 : 17.8502018229167 : JumpStart); (3.30208333333333 : 17.8502018229167 : JumpEnd); (8.91666666666667 : 17.8502018229167 : JumpStart); (9.08333333333333 : 17.8502018229167 : JumpEnd); (9.5 : 17.8502018229167)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DailyRecapDataContext/User/User_Snooze" />
+      <nodes>
+        <classShapeMoniker Id="aa62842b-e1da-42fd-9e35-f4246f2d2ed4" />
+        <classShapeMoniker Id="5de3ba29-7b65-4496-a4b5-32c7a49ada4c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 17.9470183559696); (3.16038561538462 : 18.3574039713542); (6.968748 : 18.3574039713542); (6.968748 : 19.375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DailyRecapDataContext/User/User_Solution" />
+      <nodes>
+        <classShapeMoniker Id="aa62842b-e1da-42fd-9e35-f4246f2d2ed4" />
+        <classShapeMoniker Id="3c23fbfd-43a6-4cb6-82ea-749d0ad90cec" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.9375 : 4.57859537760417); (2.9375 : 20.45599609375); (3.04166666666667 : 20.45599609375 : JumpStart); (3.39583333333333 : 20.45599609375 : JumpEnd); (3.5 : 20.45599609375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DailyRecapDataContext/Organization/Organization_UserOrganization" />
+      <nodes>
+        <classShapeMoniker Id="0ae465dc-cb4b-4de9-84d1-0a52f2810c92" />
+        <classShapeMoniker Id="291bd926-b86a-4dc9-b546-fe86d0f7c499" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.74846153846154 : 17.9824039713542); (3.15625 : 18.3901924328926); (3.15625 : 19.571746046875); (3.5 : 19.571746046875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DailyRecapDataContext/User/User_UserOrganization" />
+      <nodes>
+        <classShapeMoniker Id="aa62842b-e1da-42fd-9e35-f4246f2d2ed4" />
+        <classShapeMoniker Id="291bd926-b86a-4dc9-b546-fe86d0f7c499" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="601f1e64-de94-4508-ad80-cd097058a9eb" absoluteBounds="9.375, 10.875, 2, 3.8862125651041666">
+      <DataClassMoniker Name="/DailyRecapDataContext/Ticket" />
+      <nestedChildShapes>
+        <elementListCompartment Id="00e8e11a-cdbe-441f-b75c-8e25592cc7f5" absoluteBounds="9.39, 11.335, 1.9700000000000002, 3.3262125651041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(9.375 : 12.6450512695312); (8.73958333333333 : 12.6450512695312 : JumpStart); (8.57291666666667 : 12.6450512695312 : JumpEnd); (8.5 : 12.6450512695312)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DailyRecapDataContext/Ticket/Ticket_Problem" />
+      <nodes>
+        <classShapeMoniker Id="601f1e64-de94-4508-ad80-cd097058a9eb" />
+        <classShapeMoniker Id="4b5cb72c-2357-48c8-93ef-eb3d122a06f9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.375 : 14.46875); (11.9791666666667 : 14.46875 : JumpStart); (12.1458333333333 : 14.46875 : JumpEnd); (12.25 : 14.46875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DailyRecapDataContext/Ticket/Ticket_SnoozedTicket" />
+      <nodes>
+        <classShapeMoniker Id="601f1e64-de94-4508-ad80-cd097058a9eb" />
+        <classShapeMoniker Id="420cae63-0f5c-4e55-819a-4462ea9cbc8c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.375 : 14.7612125651042); (9.1875 : 14.9487125651042); (9.1875 : 19); (9.08333333333333 : 19 : JumpStart); (8.91666666666667 : 19 : JumpEnd); (8.875 : 19); (8.71517556509888 : 19.1598244349011 : JumpStart); (8.59732443490112 : 19.2776755650989 : JumpEnd); (8.5 : 19.375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DailyRecapDataContext/Ticket/Ticket_Solution" />
+      <nodes>
+        <classShapeMoniker Id="601f1e64-de94-4508-ad80-cd097058a9eb" />
+        <classShapeMoniker Id="3c23fbfd-43a6-4cb6-82ea-749d0ad90cec" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 5.90625); (2.85416666666667 : 5.90625 : JumpStart); (3.14583333333333 : 5.90625 : JumpEnd); (3.15104166666667 : 5.90625 : JumpStart); (3.31770833333333 : 5.90625 : JumpEnd); (10.375 : 5.90625); (10.375 : 10.875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DailyRecapDataContext/Category/Category_Ticket" />
+      <nodes>
+        <classShapeMoniker Id="0d1ff992-2802-4caf-a2e7-2f5def58cf06" />
+        <classShapeMoniker Id="601f1e64-de94-4508-ad80-cd097058a9eb" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.65625 : 10.1170068359375); (8.65625 : 14.3694075520833); (9.375 : 14.3694075520833)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DailyRecapDataContext/Contact/Contact_Ticket" />
+      <nodes>
+        <classShapeMoniker Id="e1431cb3-c47d-4e6a-9090-46d7c45d6626" />
+        <classShapeMoniker Id="601f1e64-de94-4508-ad80-cd097058a9eb" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 21.9673066923077); (3.21875 : 21.4985566923077); (3.21875 : 15.3237125651042); (8.86172976923077 : 15.3237125651042); (9.42422976923077 : 14.7612125651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DailyRecapDataContext/Location/Location_Ticket" />
+      <nodes>
+        <classShapeMoniker Id="9abf59fb-f2c9-4756-a1fd-ea0323ca14c8" />
+        <classShapeMoniker Id="601f1e64-de94-4508-ad80-cd097058a9eb" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.234375 : 4.57859537760417); (3.234375 : 14.6164368028846); (3.31715194070517 : 14.6164368028846 : JumpStart); (3.59895833333333 : 14.6164368028846 : JumpEnd); (7.38541466666667 : 14.6164368028846 : JumpStart); (7.55208133333333 : 14.6164368028846 : JumpEnd); (9.375 : 14.6164368028846)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DailyRecapDataContext/Organization/Organization_Ticket" />
+      <nodes>
+        <classShapeMoniker Id="0ae465dc-cb4b-4de9-84d1-0a52f2810c92" />
+        <classShapeMoniker Id="601f1e64-de94-4508-ad80-cd097058a9eb" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 15.2669220769231); (3.515625 : 14.5012970769231); (3.515625 : 15.2612125651042); (8.82576923076923 : 15.2612125651042); (9.375 : 14.7119817958734)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DailyRecapDataContext/User/User_Ticket" />
+      <nodes>
+        <classShapeMoniker Id="aa62842b-e1da-42fd-9e35-f4246f2d2ed4" />
+        <classShapeMoniker Id="601f1e64-de94-4508-ad80-cd097058a9eb" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="91af5fdc-3682-4b2a-80c3-446996b6e0da" absoluteBounds="3.5, 9.125, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/DailyRecapDataContext/DailyRecap" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f25b048a-4866-497b-a5c6-70923c8f8049" absoluteBounds="3.5149999999999997, 9.585, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="660f7d44-d294-470d-8b8f-c243bb87a24e" absoluteBounds="4.75, 3.125, 2, 2.5401025390625">
+      <DataClassMoniker Name="/DailyRecapDataContext/SnoozeAudit" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9469e431-00d6-4cba-9122-465944cc3a16" absoluteBounds="4.765, 3.585, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

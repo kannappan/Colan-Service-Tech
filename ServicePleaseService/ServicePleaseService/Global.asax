@@ -1,0 +1,1 @@
+<%@ Application Codebehind="Global.asax.cs" Inherits="ServicePleaseService.Global" Language="C#" %>

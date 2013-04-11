@@ -1,0 +1,26 @@
+delete from SvcTrkUser.ProblemBlob
+delete from SvcTrkUser.Problem
+delete from SvcTrkUser.SolutionBlob
+delete from SvcTrkUser.LikeUnlike
+delete from SvcTrkUser.Solution
+delete from SvcTrkUser.SnoozeAudit
+delete from SvcTrkUser.Snooze
+delete from SvcTrkUser.SnoozedTicket
+delete from SvcTrkUser.TicketComment
+delete from SvcTrkUser.Ticket
+delete from SvcTrkUser.Contact
+delete from SvcTrkUser.DailyRecap
+delete from SvcTrkUser.RecapSettingLocation
+delete from SvcTrkUser.Location
+delete from SvcTrkUser.LocationInfo
+delete from SvcTrkUser.RecapSettingDay
+delete from SvcTrkUser.RecapSettingUser
+delete from SvcTrkUser.RecapSettingCategory
+delete from SvcTrkUser.DailyRecapAudit
+delete from SvcTrkUser.RecapSetting
+--delete from SvcTrkUser.Category
+delete from SvcTrkUser.ErrorDetails
+delete from SvcTrkUser.DeviceDetail
+delete from SvcTrkUser.BlobEntry
+
+DBCC CHECKIDENT('SvcTrkUser.Ticket', RESEED, 0)

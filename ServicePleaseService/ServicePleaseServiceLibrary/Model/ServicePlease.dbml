@@ -1,0 +1,600 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ServiceTech" Class="ServicePleaseDataContext" Serialization="Unidirectional" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=stsprod.servicetrackingsystems.net;Initial Catalog=ServiceTech;Persist Security Info=True;User ID=SvcTrkUser" SettingsObjectName="ServicePleaseServiceLibrary.Properties.Settings" SettingsPropertyName="ServiceTechConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="SvcTrkUser.ApplicationType" Member="ApplicationTypes">
+    <Type Name="ApplicationType">
+      <Column Name="ApplicationTypeId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CreateDate" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="EditDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="SvcTrkUser.UserRole" Member="UserRoles">
+    <Type Name="UserRole">
+      <Column Name="UserRoleId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="RoleId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="CreateDate" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="EditDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Role_UserRole" Member="Role" ThisKey="RoleId" OtherKey="RoleId" Type="Role" IsForeignKey="true" />
+      <Association Name="User_UserRole" Member="User" ThisKey="UserId" OtherKey="UserId" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="SvcTrkUser.BlobEntry" Member="BlobEntries">
+    <Type Name="BlobEntry">
+      <Column Name="BlobId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="BlobTypeId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Blob" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="CreateDate" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="EditDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="BlobEntry_ProblemBlob" Member="ProblemBlobs" ThisKey="BlobId" OtherKey="BlobId" Type="ProblemBlob" />
+      <Association Name="BlobEntry_SolutionBlob" Member="SolutionBlobs" ThisKey="BlobId" OtherKey="BlobId" Type="SolutionBlob" />
+      <Association Name="BlobType_BlobEntry" Member="BlobType" ThisKey="BlobTypeId" OtherKey="BlobTypeId" Type="BlobType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="SvcTrkUser.BlobType" Member="BlobTypes">
+    <Type Name="BlobType">
+      <Column Name="BlobTypeId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TypeName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CreateDate" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="EditDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="BlobType_BlobEntry" Member="BlobEntries" ThisKey="BlobTypeId" OtherKey="BlobTypeId" Type="BlobEntry" />
+    </Type>
+  </Table>
+  <Table Name="SvcTrkUser.DailyRecapAudit" Member="DailyRecapAudits">
+    <Type Name="DailyRecapAudit">
+      <Column Name="DailyRecapAuditId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RecapSettingId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="TimeStamp" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="SvcTrkUser.Feature" Member="Features">
+    <Type Name="Feature">
+      <Column Name="FeatureId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="FeatureType" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="CreateDate" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="EditDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Feature_FeatureRole" Member="FeatureRoles" ThisKey="FeatureId" OtherKey="FeatureId" Type="FeatureRole" />
+      <Association Name="FeatureType_Feature" Member="FeatureType1" ThisKey="FeatureType" OtherKey="FeatureTypeId" Type="FeatureType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="SvcTrkUser.FeatureRole" Member="FeatureRoles">
+    <Type Name="FeatureRole">
+      <Column Name="FeatureRoleId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FeatureId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="RoleId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="CreateDate" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="EditDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Feature_FeatureRole" Member="Feature" ThisKey="FeatureId" OtherKey="FeatureId" Type="Feature" IsForeignKey="true" />
+      <Association Name="Role_FeatureRole" Member="Role" ThisKey="RoleId" OtherKey="RoleId" Type="Role" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="SvcTrkUser.FeatureType" Member="FeatureTypes">
+    <Type Name="FeatureType">
+      <Column Name="FeatureTypeId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TypeName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CreateDate" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="EditDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="FeatureType_Feature" Member="Features" ThisKey="FeatureTypeId" OtherKey="FeatureType" Type="Feature" />
+    </Type>
+  </Table>
+  <Table Name="SvcTrkUser.IntervalType" Member="IntervalTypes">
+    <Type Name="IntervalType">
+      <Column Name="IntervalTypeId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="CreateDate" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="EditDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="IntervalType_Snooze" Member="Snoozes" ThisKey="IntervalTypeId" OtherKey="IntervalTypeId" Type="Snooze" />
+    </Type>
+  </Table>
+  <Table Name="SvcTrkUser.LikeUnlike" Member="LikeUnlikes">
+    <Type Name="LikeUnlike">
+      <Column Name="LikeUnlikeId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SolutionId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="[Like]" Member="Like" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Unlike" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="UserId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="CreateDate" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="EditDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Solution_LikeUnlike" Member="Solution" ThisKey="SolutionId" OtherKey="SolutionId" Type="Solution" IsForeignKey="true" />
+      <Association Name="User_LikeUnlike" Member="User" ThisKey="UserId" OtherKey="UserId" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="SvcTrkUser.Location" Member="Locations">
+    <Type Name="Location">
+      <Column Name="LocationId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="OrganizationId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="LocationName" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="LocationInfoId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="ServicePlanInfoId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="EditDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Location_RecapSettingLocation" Member="RecapSettingLocations" ThisKey="LocationId" OtherKey="LocationId" Type="RecapSettingLocation" />
+      <Association Name="Location_Contact" Member="Contacts" ThisKey="LocationId" OtherKey="LocationId" Type="Contact" />
+      <Association Name="Location_Ticket" Member="Tickets" ThisKey="LocationId" OtherKey="LocationId" Type="Ticket" />
+      <Association Name="LocationInfo_Location" Member="LocationInfo" ThisKey="LocationInfoId" OtherKey="LocationInfoId" Type="LocationInfo" IsForeignKey="true" />
+      <Association Name="ServicePlanInfo_Location" Member="ServicePlanInfo" ThisKey="ServicePlanInfoId" OtherKey="ServicePlanInfoId" Type="ServicePlanInfo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="SvcTrkUser.LocationInfo" Member="LocationInfos">
+    <Type Name="LocationInfo">
+      <Column Name="LocationInfoId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Address1" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="Address2" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="State" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="PostalCode" Type="System.String" DbType="NVarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="Country" Type="System.String" DbType="NVarChar(75)" CanBeNull="true" />
+      <Column Name="BusinessPhone" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Fax" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="MobilePhone" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="HomePhone" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Email1" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Email2" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Website" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="EditDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="LocationInfo_Location" Member="Locations" ThisKey="LocationInfoId" OtherKey="LocationInfoId" Type="Location" />
+    </Type>
+  </Table>
+  <Table Name="SvcTrkUser.Organization" Member="Organizations">
+    <Type Name="Organization">
+      <Column Name="OrganizationId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="OrganizationName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CreateDate" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="EditDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Organization_UserOrganization" Member="UserOrganizations" ThisKey="OrganizationId" OtherKey="OrganizationId" Type="UserOrganization" />
+      <Association Name="Organization_Category" Member="Categories" ThisKey="OrganizationId" OtherKey="OrganizationId" Type="Category" />
+      <Association Name="Organization_Contact" Member="Contacts" ThisKey="OrganizationId" OtherKey="OrganizationId" Type="Contact" />
+      <Association Name="Organization_Ticket" Member="Tickets" ThisKey="OrganizationId" OtherKey="OrganizationId" Type="Ticket" />
+    </Type>
+  </Table>
+  <Table Name="SvcTrkUser.Problem" Member="Problems">
+    <Type Name="Problem">
+      <Column Name="ProblemId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TicketId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="ProblemShortDesc" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="ProblemText" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="LikeCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UnlikeCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="EditDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UserId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Association Name="Problem_ProblemBlob" Member="ProblemBlobs" ThisKey="ProblemId" OtherKey="ProblemId" Type="ProblemBlob" />
+      <Association Name="User_Problem" Member="User" ThisKey="UserId" OtherKey="UserId" Type="User" IsForeignKey="true" />
+      <Association Name="Ticket_Problem" Member="Ticket" ThisKey="TicketId" OtherKey="TicketId" Type="Ticket" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="SvcTrkUser.ProblemBlob" Member="ProblemBlobs">
+    <Type Name="ProblemBlob">
+      <Column Name="ProblemBlobId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ProblemId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="BlobId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="CreateDate" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="EditDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="BlobEntry_ProblemBlob" Member="BlobEntry" ThisKey="BlobId" OtherKey="BlobId" Type="BlobEntry" IsForeignKey="true" />
+      <Association Name="Problem_ProblemBlob" Member="Problem" ThisKey="ProblemId" OtherKey="ProblemId" Type="Problem" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="SvcTrkUser.RecapSetting" Member="RecapSettings">
+    <Type Name="RecapSetting">
+      <Column Name="RecapSettingId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="BroadcastTime" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="StartTime" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="EndTime" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="RecapMail" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="TimeZone" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CreateDate" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="EditDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="RecapSetting_RecapSettingCategory" Member="RecapSettingCategories" ThisKey="RecapSettingId" OtherKey="RecapSettingId" Type="RecapSettingCategory" />
+      <Association Name="RecapSetting_RecapSettingDay" Member="RecapSettingDays" ThisKey="RecapSettingId" OtherKey="RecapSettingId" Type="RecapSettingDay" />
+      <Association Name="RecapSetting_RecapSettingLocation" Member="RecapSettingLocations" ThisKey="RecapSettingId" OtherKey="RecapSettingId" Type="RecapSettingLocation" />
+      <Association Name="RecapSetting_RecapSettingUser" Member="RecapSettingUsers" ThisKey="RecapSettingId" OtherKey="RecapSettingId" Type="RecapSettingUser" />
+    </Type>
+  </Table>
+  <Table Name="SvcTrkUser.RecapSettingCategory" Member="RecapSettingCategories">
+    <Type Name="RecapSettingCategory">
+      <Column Name="RecapSettingCategoryId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CategoryId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="RecapSettingId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="EditDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="RecapSetting_RecapSettingCategory" Member="RecapSetting" ThisKey="RecapSettingId" OtherKey="RecapSettingId" Type="RecapSetting" IsForeignKey="true" />
+      <Association Name="Category_RecapSettingCategory" Member="Category" ThisKey="CategoryId" OtherKey="CategoryId" Type="Category" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="SvcTrkUser.RecapSettingDay" Member="RecapSettingDays">
+    <Type Name="RecapSettingDay">
+      <Column Name="RecapSettingDayId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RecapSettingId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="DayName" Type="System.String" DbType="Char(3) NOT NULL" CanBeNull="false" />
+      <Column Name="CreateDate" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="EditDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="RecapSetting_RecapSettingDay" Member="RecapSetting" ThisKey="RecapSettingId" OtherKey="RecapSettingId" Type="RecapSetting" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="SvcTrkUser.RecapSettingLocation" Member="RecapSettingLocations">
+    <Type Name="RecapSettingLocation">
+      <Column Name="RecapSettingLocationId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RecapSettingId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="LocationId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="CreateDate" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="EditDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Location_RecapSettingLocation" Member="Location" ThisKey="LocationId" OtherKey="LocationId" Type="Location" IsForeignKey="true" />
+      <Association Name="RecapSetting_RecapSettingLocation" Member="RecapSetting" ThisKey="RecapSettingId" OtherKey="RecapSettingId" Type="RecapSetting" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="SvcTrkUser.RecapSettingUser" Member="RecapSettingUsers">
+    <Type Name="RecapSettingUser">
+      <Column Name="RecapSettingUserId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="RecapSettingId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="EditDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="RecapSetting_RecapSettingUser" Member="RecapSetting" ThisKey="RecapSettingId" OtherKey="RecapSettingId" Type="RecapSetting" IsForeignKey="true" />
+      <Association Name="User_RecapSettingUser" Member="User" ThisKey="UserId" OtherKey="UserId" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="SvcTrkUser.Role" Member="Roles">
+    <Type Name="Role">
+      <Column Name="RoleId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CreateDate" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="EditDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Role_UserRole" Member="UserRoles" ThisKey="RoleId" OtherKey="RoleId" Type="UserRole" />
+      <Association Name="Role_FeatureRole" Member="FeatureRoles" ThisKey="RoleId" OtherKey="RoleId" Type="FeatureRole" />
+      <Association Name="Role_RolePermission" Member="RolePermissions" ThisKey="RoleId" OtherKey="RoleId" Type="RolePermission" />
+      <Association Name="Role_RolePermission1" Member="RolePermission1s" ThisKey="RoleId" OtherKey="RoleId" Type="RolePermission1" />
+    </Type>
+  </Table>
+  <Table Name="SvcTrkUser.ServicePlanInfo" Member="ServicePlanInfos">
+    <Type Name="ServicePlanInfo">
+      <Column Name="ServicePlanInfoId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ServicePlanTypeId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="SubscriptionStart" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SubscriptionEnd" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="EditDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="ServicePlanInfo_Location" Member="Locations" ThisKey="ServicePlanInfoId" OtherKey="ServicePlanInfoId" Type="Location" />
+      <Association Name="ServicePlanType_ServicePlanInfo" Member="ServicePlanType" ThisKey="ServicePlanTypeId" OtherKey="ServicePlanTypeId" Type="ServicePlanType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="SvcTrkUser.ServicePlanType" Member="ServicePlanTypes">
+    <Type Name="ServicePlanType">
+      <Column Name="ServicePlanTypeId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="Initial" Type="System.Char" DbType="NChar(1)" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="EditDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="ServicePlanType_ServicePlanInfo" Member="ServicePlanInfos" ThisKey="ServicePlanTypeId" OtherKey="ServicePlanTypeId" Type="ServicePlanInfo" />
+    </Type>
+  </Table>
+  <Table Name="SvcTrkUser.Snooze" Member="Snoozes">
+    <Type Name="Snooze">
+      <Column Name="SnoozeId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ReasonId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="IsCompleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CompletedDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IsDateInterval" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsQuickShare" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="StartDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EndDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="QuickShareHours" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="QuickShareMinutes" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="SnoozeInterval" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="IntervalTypeId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EditDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UserId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Association Name="Snooze_SnoozedTicket" Member="SnoozedTickets" ThisKey="SnoozeId" OtherKey="SnoozeId" Type="SnoozedTicket" />
+      <Association Name="IntervalType_Snooze" Member="IntervalType" ThisKey="IntervalTypeId" OtherKey="IntervalTypeId" Type="IntervalType" IsForeignKey="true" />
+      <Association Name="SnoozeReason_Snooze" Member="SnoozeReason" ThisKey="ReasonId" OtherKey="ReasonId" Type="SnoozeReason" IsForeignKey="true" />
+      <Association Name="User_Snooze" Member="User" ThisKey="UserId" OtherKey="UserId" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="SvcTrkUser.SnoozedTicket" Member="SnoozedTickets">
+    <Type Name="SnoozedTicket">
+      <Column Name="SnoozedTicketId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SnoozeId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="TicketId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="EditDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Snooze_SnoozedTicket" Member="Snooze" ThisKey="SnoozeId" OtherKey="SnoozeId" Type="Snooze" IsForeignKey="true" />
+      <Association Name="Ticket_SnoozedTicket" Member="Ticket" ThisKey="TicketId" OtherKey="TicketId" Type="Ticket" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="SvcTrkUser.SnoozeReason" Member="SnoozeReasons">
+    <Type Name="SnoozeReason">
+      <Column Name="ReasonId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="CreateDate" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="EditDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="SnoozeReason_Snooze" Member="Snoozes" ThisKey="ReasonId" OtherKey="ReasonId" Type="Snooze" />
+    </Type>
+  </Table>
+  <Table Name="SvcTrkUser.Solution" Member="Solutions">
+    <Type Name="Solution">
+      <Column Name="SolutionId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TicketId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="SolutionShortDesc" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="SolutionText" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="LikeCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UnlikeCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="EditDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UserId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Association Name="Solution_LikeUnlike" Member="LikeUnlikes" ThisKey="SolutionId" OtherKey="SolutionId" Type="LikeUnlike" />
+      <Association Name="Solution_SolutionBlob" Member="SolutionBlobs" ThisKey="SolutionId" OtherKey="SolutionId" Type="SolutionBlob" />
+      <Association Name="User_Solution" Member="User" ThisKey="UserId" OtherKey="UserId" Type="User" IsForeignKey="true" />
+      <Association Name="Ticket_Solution" Member="Ticket" ThisKey="TicketId" OtherKey="TicketId" Type="Ticket" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="SvcTrkUser.SolutionBlob" Member="SolutionBlobs">
+    <Type Name="SolutionBlob">
+      <Column Name="SolutionBlobId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SolutionId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="BlobId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="CreateDate" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="EditDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="BlobEntry_SolutionBlob" Member="BlobEntry" ThisKey="BlobId" OtherKey="BlobId" Type="BlobEntry" IsForeignKey="true" />
+      <Association Name="Solution_SolutionBlob" Member="Solution" ThisKey="SolutionId" OtherKey="SolutionId" Type="Solution" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="SvcTrkUser.SystemConfig" Member="SystemConfigs">
+    <Type Name="SystemConfig">
+      <Column Name="SystemConfigId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ConfigKey" Type="System.String" DbType="NVarChar(4000) NOT NULL" CanBeNull="false" />
+      <Column Name="ConfigValue" Type="System.String" DbType="NVarChar(4000) NOT NULL" CanBeNull="false" />
+      <Column Name="CreateDate" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="EditDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="SvcTrkUser.UserOrganization" Member="UserOrganizations">
+    <Type Name="UserOrganization">
+      <Column Name="UserOrganizationId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="OrganizationId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="CreateDate" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="EditDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Organization_UserOrganization" Member="Organization" ThisKey="OrganizationId" OtherKey="OrganizationId" Type="Organization" IsForeignKey="true" />
+      <Association Name="User_UserOrganization" Member="User" ThisKey="UserId" OtherKey="UserId" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="SvcTrkUser.ErrorDetails" Member="ErrorDetails">
+    <Type Name="ErrorDetail">
+      <Column Name="ExceptionId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ExceptionNumber" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ExceptionMessage" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="InnerException" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="MethodName" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="SvcTrkUser.Permission" Member="Permissions">
+    <Type Name="Permission">
+      <Column Name="PermissionId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EditDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Category" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Association Name="Permission_RolePermission" Member="RolePermissions" ThisKey="PermissionId" OtherKey="PermissionId" Type="RolePermission" />
+      <Association Name="Permission_RolePermission1" Member="RolePermission1s" ThisKey="PermissionId" OtherKey="PermissionId" Type="RolePermission1" />
+    </Type>
+  </Table>
+  <Table Name="SvcTrkUser.RolePermission" Member="RolePermissions">
+    <Type Name="RolePermission">
+      <Column Name="RolePermissionId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RoleId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="PermissionId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="EditDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Permission_RolePermission" Member="Permission" ThisKey="PermissionId" OtherKey="PermissionId" Type="Permission" IsForeignKey="true" />
+      <Association Name="Role_RolePermission" Member="Role" ThisKey="RoleId" OtherKey="RoleId" Type="Role" IsForeignKey="true" />
+      <Association Name="Permission1_RolePermission" Member="Permission1" ThisKey="PermissionId" OtherKey="PermissionId" Type="Permission1" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="SvcTrkUser.SnoozeAudit" Member="SnoozeAudits">
+    <Type Name="SnoozeAudit">
+      <Column Name="SnoozeAuditId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SnoozeId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="IntervalTime" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StartDate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="EndDate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="EmailDate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Count" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsSent" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Timestamp" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="SvcTrkUser.[User]" Member="Users">
+    <Type Name="User">
+      <Column Name="UserId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="HashedPassword" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(75) NOT NULL" CanBeNull="false" />
+      <Column Name="MiddleName" Type="System.String" DbType="NVarChar(75)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(75) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="EditDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Address1" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Address2" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Address3" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Status" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="User_UserRole" Member="UserRoles" ThisKey="UserId" OtherKey="UserId" Type="UserRole" />
+      <Association Name="User_LikeUnlike" Member="LikeUnlikes" ThisKey="UserId" OtherKey="UserId" Type="LikeUnlike" />
+      <Association Name="User_Problem" Member="Problems" ThisKey="UserId" OtherKey="UserId" Type="Problem" />
+      <Association Name="User_RecapSettingUser" Member="RecapSettingUsers" ThisKey="UserId" OtherKey="UserId" Type="RecapSettingUser" />
+      <Association Name="User_Snooze" Member="Snoozes" ThisKey="UserId" OtherKey="UserId" Type="Snooze" />
+      <Association Name="User_Solution" Member="Solutions" ThisKey="UserId" OtherKey="UserId" Type="Solution" />
+      <Association Name="User_UserOrganization" Member="UserOrganizations" ThisKey="UserId" OtherKey="UserId" Type="UserOrganization" />
+      <Association Name="User_TicketComment" Member="TicketComments" ThisKey="UserId" OtherKey="UserId" Type="TicketComment" />
+      <Association Name="User_DeviceDetail" Member="DeviceDetails" ThisKey="UserId" OtherKey="UserId" Type="DeviceDetail" />
+      <Association Name="User_Ticket" Member="Tickets" ThisKey="UserId" OtherKey="UserId" Type="Ticket" />
+    </Type>
+  </Table>
+  <Table Name="SvcTrkUser.RolePermission" Member="RolePermission1s">
+    <Type Name="RolePermission1">
+      <Column Name="RolePermissionId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RoleId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="PermissionId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="CreateDate" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="EditDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Permission_RolePermission1" Member="Permission" ThisKey="PermissionId" OtherKey="PermissionId" Type="Permission" IsForeignKey="true" />
+      <Association Name="Role_RolePermission1" Member="Role" ThisKey="RoleId" OtherKey="RoleId" Type="Role" IsForeignKey="true" />
+      <Association Name="Permission1_RolePermission1" Member="Permission1" ThisKey="PermissionId" OtherKey="PermissionId" Type="Permission1" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="SvcTrkUser.Permission" Member="Permission1s">
+    <Type Name="Permission1">
+      <Column Name="PermissionId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Category" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EditDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Permission1_RolePermission" Member="RolePermissions" ThisKey="PermissionId" OtherKey="PermissionId" Type="RolePermission" />
+      <Association Name="Permission1_RolePermission1" Member="RolePermission1s" ThisKey="PermissionId" OtherKey="PermissionId" Type="RolePermission1" />
+    </Type>
+  </Table>
+  <Table Name="SvcTrkUser.TicketComment" Member="TicketComments">
+    <Type Name="TicketComment">
+      <Column Name="TicketCommentId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TicketId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="UserId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Comment" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="EditDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="User_TicketComment" Member="User" ThisKey="UserId" OtherKey="UserId" Type="User" IsForeignKey="true" />
+      <Association Name="Ticket_TicketComment" Member="Ticket" ThisKey="TicketId" OtherKey="TicketId" Type="Ticket" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="SvcTrkUser.DeviceDetail" Member="DeviceDetails">
+    <Type Name="DeviceDetail">
+      <Column Name="DeviceDetailId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UDID" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="DeviceToken" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="EditDate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UserId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Association Name="User_DeviceDetail" Member="User" ThisKey="UserId" OtherKey="UserId" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="SvcTrkUser.Category" Member="Categories">
+    <Type Name="Category">
+      <Column Name="CategoryId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="OrganizationId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="CategoryName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CategoryIcon" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="CreateDate" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="EditDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="Category_RecapSettingCategory" Member="RecapSettingCategories" ThisKey="CategoryId" OtherKey="CategoryId" Type="RecapSettingCategory" />
+      <Association Name="Category_Ticket" Member="Tickets" ThisKey="CategoryId" OtherKey="CategoryId" Type="Ticket" />
+      <Association Name="Organization_Category" Member="Organization" ThisKey="OrganizationId" OtherKey="OrganizationId" Type="Organization" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="SvcTrkUser.Contact" Member="Contacts">
+    <Type Name="Contact">
+      <Column Name="ContactId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="OrganizationId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="ContactName" Type="System.String" DbType="NVarChar(120) NOT NULL" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(75) NOT NULL" CanBeNull="false" />
+      <Column Name="MiddleName" Type="System.String" DbType="NVarChar(75)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(75) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(75)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="NVarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="CallbackNumber" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="LocationId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="EditDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="JobTitle" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Cell" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="Notes" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CallbackExtension" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="PhoeExtension" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="CellExtension" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Association Name="Contact_Ticket" Member="Tickets" ThisKey="ContactId" OtherKey="ContactId" Type="Ticket" />
+      <Association Name="Location_Contact" Member="Location" ThisKey="LocationId" OtherKey="LocationId" Type="Location" IsForeignKey="true" />
+      <Association Name="Organization_Contact" Member="Organization" ThisKey="OrganizationId" OtherKey="OrganizationId" Type="Organization" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="SvcTrkUser.Ticket" Member="Tickets">
+    <Type Name="Ticket">
+      <Column Name="TicketId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TicketNum" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TicketNumber" Type="System.String" DbType="NVarChar(6)" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="IsHelpDoc" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="TicketName" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="CategoryId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="ContactId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LocationId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="OrganizationId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="ResponseTimeStamp" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CloseDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="EditDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Comments" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsHelpDocShare" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Ticket_Problem" Member="Problems" ThisKey="TicketId" OtherKey="TicketId" Type="Problem" />
+      <Association Name="Ticket_SnoozedTicket" Member="SnoozedTickets" ThisKey="TicketId" OtherKey="TicketId" Type="SnoozedTicket" />
+      <Association Name="Ticket_Solution" Member="Solutions" ThisKey="TicketId" OtherKey="TicketId" Type="Solution" />
+      <Association Name="Ticket_TicketComment" Member="TicketComments" ThisKey="TicketId" OtherKey="TicketId" Type="TicketComment" />
+      <Association Name="Category_Ticket" Member="Category" ThisKey="CategoryId" OtherKey="CategoryId" Type="Category" IsForeignKey="true" />
+      <Association Name="Contact_Ticket" Member="Contact" ThisKey="ContactId" OtherKey="ContactId" Type="Contact" IsForeignKey="true" />
+      <Association Name="Location_Ticket" Member="Location" ThisKey="LocationId" OtherKey="LocationId" Type="Location" IsForeignKey="true" />
+      <Association Name="Organization_Ticket" Member="Organization" ThisKey="OrganizationId" OtherKey="OrganizationId" Type="Organization" IsForeignKey="true" />
+      <Association Name="User_Ticket" Member="User" ThisKey="UserId" OtherKey="UserId" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="SvcTrkUser.DailyRecap" Member="DailyRecaps">
+    <Type Name="DailyRecap">
+      <Column Name="DailyRecapId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TechId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Action" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Object" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Value" Type="System.String" DbType="NVarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="TimeStamp" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CreateDate" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="EditDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LocationId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="CategoryId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="TicketId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="SvcTrkUser.SP_ProblemBlobIcon" Method="SP_ProblemBlobIcon">
+    <Parameter Name="ticketId" Type="System.Guid" DbType="UniqueIdentifier" />
+    <ElementType Name="SP_ProblemBlobIconResult">
+      <Column Name="ProblemId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="TicketId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="ProblemShortDesc" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="ProblemText" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="LikeCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UnlikeCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="EditDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UserId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="BlobTypeCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="SvcTrkUser.SP_SolutionBlobIcon" Method="SP_SolutionBlobIcon">
+    <Parameter Name="ticketId" Type="System.Guid" DbType="UniqueIdentifier" />
+    <ElementType Name="SP_SolutionBlobIconResult">
+      <Column Name="SolutionId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="TicketId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="SolutionShortDesc" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="SolutionText" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="LikeCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UnlikeCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="EditDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UserId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="BlobTypeCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>
